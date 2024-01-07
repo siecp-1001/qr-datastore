@@ -1,0 +1,29 @@
+{% extends "base.html" %}
+{% block content %}
+  <h1>user note</h1>
+  {% for notes in object_list %}
+    <p>
+      {{ notes.NOTE }}<br>
+      {{ notes.date }}<br>
+      {% if notes.qr_code %}
+                    <img src="{{ notes.qr_code.url }}" alt="QR Code for {{ notes.NOTE }}">
+          {% else %}
+                    No QR Code available
+     {% endif %}
+    </p>
+    <p>
+      <a href="{% url 'search:note_update' notes.id %}">Update address</a>
+    </p>
+    <p>
+      <a href="{% url 'search:note_delete' notes.id %}">Delete address</a>
+    </p>
+    {% if not forloop.last %}
+      <hr>
+    {% endif %}
+  {% endfor %}
+  
+  <p>
+   <a href="{% url 'search:create_note' %}">Create a New Note</a>
+    <a href="{% url 'search:note_create'   %}">Add new address</a>
+  </p>
+{% endblock content %}

@@ -1,0 +1,67 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport"   content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <!-- Bootstrap CSS -->
+    
+    <link rel="stylesheet" href="{% static 'css/man.css' %}">
+    <title>noty</title>
+</head>
+<body>
+<div class="title"><h1>noty</h1></div>
+  <div class="header1" >
+       <div class="header1-right">
+            <ul class="navbar-nav mr-auto">
+          <li class="nav-item {% if request.path == "/" %}active{% endif %}">
+          <a class="nav-link" href="/">Home</a>
+        </li>
+          </li>
+      
+       
+       
+         
+         <li
+          class="nav-item {% if request.path == "/login/" %} active{% endif %}">
+           <a class="nav-link" href="/login/">login</a>
+         </li>
+            <li
+          class="nav-item {% if request.path == "/note/" %} active{% endif %}">
+           <a class="nav-link" href="/note/">my notes</a>
+         </li>
+
+        </ul>
+       </div>
+       
+      </div>
+      </div>
+    </div>               
+  </nav>
+ 
+  {% for message in messages  %}
+    <div class="alert alert-{{message.tags}}">{{message}}</div>
+    
+  {% endfor %}
+  {% if request.basket %}
+       <div>
+         {{ request.basket.count }}
+         items in basket
+       </div>
+  {% endif %}
+    
+
+ {% block content %} 
+   
+ {% endblock content %}
+ 
+    <script src="{% static "js/load.js" %}"></script>
+   
+    
+    {% block js %}
+      
+    {% endblock js %}
+      
+    
+</body>
+</html>

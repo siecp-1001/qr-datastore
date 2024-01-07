@@ -1,0 +1,21 @@
+
+{% extends "base.html" %}
+{% load static %}
+{% block content %}
+
+    <div class="container">
+        <div class="div-transform">
+            <div class="card card1" href="">
+                <h2> signup</h2>
+                <p>don't you have an account ?</p>
+                <h4>please signup</h4>
+                <a href="/signup/"><span>signup</span><div class="liqued {% if request.path == "/signup/" %} active{% endif %}"></div></a>
+            </div>
+        
+           
+        </div>
+    </div>
+   
+    <div class="loader"></div>
+
+{% endblock content %}

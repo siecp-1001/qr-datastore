@@ -1,0 +1,427 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: rgb(199, 149, 149);
+    height: 300vh;
+    display: grid;
+    place-items: center center;
+}
+
+.header1 {
+    overflow: hidden;
+    margin-top: -20%;
+    background-color: rgb(199, 149, 149);
+    padding: 20px 10px;
+    border-radius: 50px;
+    margin-left: -8%;
+    width: fit-window;
+}
+
+.header1 li {
+    float: left;
+    color: rgb(199, 149, 149);
+    text-align: center;
+    padding: 12px;
+    text-decoration: none;
+    font-size: 18px;
+    line-height: 25px;
+    border-radius: 4px;
+    width: 300px;
+}
+
+.header1 a.logo {
+    font-size: 25px;
+    font-weight: bold;
+}
+
+.header1 a:hover {
+    background-color: #ddd;
+    color: rgb(233, 0, 0);
+}
+
+.header1 a.active {
+    background-color: dodgerblue;
+    color: white;
+}
+
+.header1-right {
+    float: right;
+}
+
+h1 {
+    display: inline;
+    color: blueviolet;
+    margin-top: -20%;
+    background-image: linear-gradient(white, white);
+    background-repeat: no-repeat;
+    background-position: right;
+    background-size: 100% 100%;
+    transition: background-size 1000ms, color 700ms;
+    text-align: center;
+}
+
+h1:hover {
+    background-size: 0% 100%;
+    color: black;
+}
+
+/*---------------------------------------*/
+
+* {
+    font-family: "Robto";
+}
+
+
+
+.container{
+    display: flex;
+    margin-top: -10%;
+    align-items: center;
+    justify-content: center;
+    perspective: 90rem;
+    perspective-origin: 50% 60%;
+}
+.div-transform{
+    display: flex;
+    transform: rotateX(10deg) rotateY(15deg) rotateZ(-9deg) scale3d(1,1,-0.9)
+     scale(1.1) translateX(50px);
+}
+
+.card{
+ 
+    color: aliceblue;
+    border-radius: 8px;
+    padding: 0px 18px;
+    width: 500px;
+    height: 150px;
+    transition: 0.5s ease;
+    overflow: hidden;
+    transform: translate(0);
+}
+.card::before{
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    width: 100%;
+    height: 100%;
+    opacity: 0.85;
+
+}
+.card h2{
+    text-transform: capitalize;
+}
+.card h4{
+    text-transform: uppercase;
+    letter-spacing: .5px;
+    margin-top: 14px;
+}
+.card1{
+    background-size: cover;
+    transform: scale(1.02);
+    margin-right: 40px;
+}
+.card1:hover{
+    transform: scale(1.11);
+    box-shadow: -7px 4px 28px -3px #b527cf;
+}
+.card1::before{
+    background: linear-gradient( 90deg, rgb(199, 149, 149) 0%,#bd69a8 70%);
+}
+
+
+.title{
+    text-align: center;
+    margin-top: 30px;
+    text-transform: capitalize;
+    letter-spacing: 4px;
+    
+}
+.container2{
+    position: absolute;
+    margin-top: 40%;  
+    left: 50%;
+    transform: translate(-50%);
+    width: 90%;
+    max-width: 1200px;
+    text-align: center;
+   
+}
+
+.container2 .btn{
+    display: inline-block;
+    width: 30px;
+    height: 30px;
+    background: rgb(252, 178, 178);
+    box-shadow: 0 5px 15px -5px #aaa;
+    margin: 10px;
+    border-radius: 30%;
+    overflow: hidden;
+    position: relative;
+    color: #42d2ff;
+}
+.container2 .btn i{
+    position: relative;
+    z-index: 4;
+    line-height: 90px;
+    font-size: 26px;
+    transition: 0.3s ease-in-out;
+}
+
+.container2 .btn::before{
+    content: "";
+    position: absolute;
+    width: 120%;
+    height: 120%;
+    background: linear-gradient(#00c6ff,#0072ff);
+    transform: rotate(45deg);
+    left: -110%;
+    top: 90%;
+}
+.container2 .btn:hover i{
+    color: #fff;
+    transform: scale(1.3);
+}
+.container2 .btn:hover::before{
+    animation: onHover 0.7s 1;
+    left: -10%;
+    top: -10%;
+}
+
+@keyframes onHover{
+    0%{
+        left: -110%;
+        top: 90%;
+    }
+    50%{
+        left: 10%;
+        top: -50%;
+    }
+    100%{
+        top: -10%;
+        left: -10%;
+    }
+}
+.title h1 {
+    text-align: center;
+    display: inline;
+    color: rgb(62, 0, 119);
+    transform: scale(1.01);
+    background-repeat: no-repeat;
+    background-position: right;
+    background-size: 100% 100%;
+    transition: background-size 1000ms, color 700ms;
+}
+.title h1:hover {
+    background-size: 0% 100%;
+    transform: scale(1.11);
+    box-shadow: -7px 4px 28px -3px #b527cf;
+    color: rgb(175, 4, 138);
+}
+.title h1::before{
+    background: linear-gradient( 90deg, #b527cf 0%,#bb4fb2 40%);
+}
+
+
+a{
+    position: relative;
+    padding: 20px 50px;
+    margin-left: 100px;
+    display: block;
+    text-decoration: none;
+    text-transform: uppercase;
+    width: 200px;
+    overflow: hidden;
+    border-radius: 40px;
+}
+
+
+a span{
+    position: relative;
+    
+    font-size: 20px;
+    font-family: Arial;
+    letter-spacing: 8px;
+    z-index: 1;
+}
+a .liqued{
+    position: absolute;
+    top: -60px;
+    left: 0;
+    width: 100px;
+    height: 200px;
+   
+  
+    transition: .5s;
+
+}
+
+a .liqued::after,
+a .liqued::before{
+    content: '';
+    width: 200%;
+    height: 200%;
+    position: absolute;
+    top: 0;
+   left: 90%;
+    transform: translate(-50%,-70%);
+    background: rgb(194, 8, 169);
+}
+
+a .liqued::before{
+    border-radius: 45%;
+    background: linear-gradient( 90deg, #b527cf 0%,#3546f0 100%);
+    animation: animate 10s linear infinite;
+}
+a .liqued::after{
+    border-radius: 40px;
+    background: linear-gradient( 90deg, rgb(199, 149, 149) 0%,#b46adf 100%);
+}
+a:hover .liqued{
+    top: -120px;
+}
+/*///*/
+a .seed{
+    position: absolute;
+    top: -60px;
+    left: 0;
+    width: 100px;
+    height: 200px;
+   
+  
+    transition: .5s;
+
+}
+
+a .seed::after,
+a .seed::before{
+    content: '';
+    width: 180%;
+    height: 200%;
+    position: absolute;
+    top: 0;
+   left: 85%;
+    transform: translate(-50%,-70%);
+    background: rgb(194, 8, 169);
+}
+
+a .seed::before{
+    border-radius: 45%;
+    background: linear-gradient(90deg , rgb(0, 153, 255) 0%,  #b527cf 100%);
+    animation: animate 10s linear infinite;
+}
+a .seed::after{
+    border-radius: 40px;
+    background: linear-gradient(90deg , rgb(0, 153, 255) 0%,  #b527cf 100%);
+}
+a:hover .seed{
+    top: -120px;
+}
+@keyframes animate{
+    0%{
+        transform: translate(-50%,-69%) rotate(0deg);
+    }
+    100%{
+        transform: translate(-50%,-69%) rotate(360deg);
+    }
+}
+
+
+/**/
+a .upload{
+    position: absolute;
+    top: -60px;
+    left: 0;
+    width: 120px;
+    height: 200px;
+   
+  
+    transition: .5s;
+
+}
+
+a .upload::after,
+a .upload::before{
+    content: '';
+    width: 180%;
+    height: 200%;
+    position: absolute;
+    top: 5px;
+   left: 80%;
+    transform: translate(-50%,-70%);
+    background: rgb(194, 8, 169);
+}
+
+a .upload::before{
+    border-radius: 45%;
+    background:   linear-gradient(90deg ,#ff9500 0%,#d5cb0f 100%);
+    animation: animate 10s linear infinite;
+}
+a .upload::after{
+    border-radius: 40px;
+    background:   linear-gradient(90deg ,#ff9500 0%,#d5cb0f 100%);
+}
+a:hover .upload{
+    top: -120px;
+}
+@keyframes animate{
+    0%{
+        transform: translate(-50%,-69%) rotate(0deg);
+    }
+    100%{
+        transform: translate(-50%,-69%) rotate(360deg);
+    }
+}
+.loader{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #aaa;
+    transition:
+    opacity 0.90s,visibiity 0.90s ;
+    
+}
+.loader-hidden{
+    opacity: 0;
+    visibility: hidden;
+}
+.loader::after{
+    content: "";
+    width: 75px;
+    height: 75px;
+    border: 15px solid #dddd;
+    border-top-color: #b527cf ;
+    border-radius: 50%;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    -ms-border-radius: 50%;
+    -o-border-radius: 50%;
+    animation: loading .90s ease infinite;
+    -webkit-animation: loading .90s ease infinite;
+}
+@keyframes loading{
+    from{
+        transform: rotate(0turn);
+        -webkit-transform: rotate(0turn);
+        -moz-transform: rotate(0turn);
+        -ms-transform: rotate(0turn);
+        -o-transform: rotate(0turn);
+}
+to{
+    transform: rotate(1turn);
+    -webkit-transform: rotate(1turn);
+    -moz-transform: rotate(1turn);
+    -ms-transform: rotate(1turn);
+    -o-transform: rotate(1turn);
+}
+}
